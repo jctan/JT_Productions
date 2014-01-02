@@ -1,0 +1,22 @@
+<% provide(:title, "Blog") %>
+<div class="large-8 small-centered columns">
+  <br />
+  <h1 class = "centered">Blog</h1>
+  <ul>
+    <% @articles.each do |article| %>
+    <hr>
+      <p><%= link_to article.name, article %> &nbsp | &nbsp <%= article.date.to_date %>
+        <% if current_user %>
+       | <%= link_to "Edit", edit_article_path(article.id), class: 'button alert tiny radius round' %>
+       <% end %>
+      </p>
+    <% end %>
+  </ul>
+
+  <div class="left">
+    <% if current_user %>
+      <%= link_to "New Blog", new_article_path, class: 'button alert tiny radius round' %>
+    <% end %>
+    <%= link_to "Back", root_path, class: 'button tiny radius round' %>
+  </div>
+</div>

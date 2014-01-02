@@ -1,0 +1,20 @@
+<% provide(:title, @article.name) %>
+
+<div class="large-8 small-centered columns">
+  <br />  
+  <h1><%= @article.name %></h1>
+  <h5><%= @article.date.to_date %></h5>
+  <hr>
+  <%= image_tag @article.picture.url %>
+  <br /><br />
+  <p>
+    <%= raw @article.body %>
+  </p>
+
+  <div class="left">
+    <% if current_user %>
+      <%= link_to 'Edit', edit_article_path(@article), class: 'button alert tiny radius round' %>
+    <% end %>
+    <%= link_to 'Back', articles_path, class: 'button tiny radius round' %>
+  </div>
+  <hr>

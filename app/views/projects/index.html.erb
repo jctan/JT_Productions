@@ -1,0 +1,36 @@
+<% provide(:title, "Portfolio") %>
+<div class="large-8 small-centered columns">
+   <br />
+  <h1 class = "centered">Portfolio</h1>
+  <% if current_user %>
+    <%= link_to "New Project", new_project_path, class: 'button alert tiny radius round' %>
+  <% end %>
+  <ul>
+    <% @projects.each do |project| %>
+      <hr>
+      <h3>
+        <%= project.name %>
+      </h3>
+      <%= image_tag project.picture.url() %>
+      <br /><br />
+      <p>
+        <%= raw project.body %>
+      </p>
+      <p>
+        <% unless project.github.empty? %>
+          <%= link_to "Github", project.github, class: 'button tiny radius round' %>
+        <% end %>
+        <% unless project.site_link.empty? %>
+          <%= link_to "Link", project.site_link, class: 'button tiny radius round' %>
+        <% end %>
+      </p>
+
+      <div class="left">
+      <% if current_user %>
+          <%= link_to "Edit", edit_project_path(project.id), class: 'button alert tiny radius round' %>
+      <% end %>
+    <% end %>
+    <%= link_to "Back", root_path, class: 'button tiny radius round left' %>
+    </div>
+  </ul> 
+</div>

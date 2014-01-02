@@ -1,0 +1,30 @@
+<div class = "centered"> 
+  <div class = "large-6 small-centered columns">
+    <div>
+      <% if current_user %>
+        <icon class="fi-x"></icon> <%= link_to "Logout", :logout, method: :post %>
+      <% end %>
+    </div>
+    
+    <div>
+      <p id = "notice"><%= flash[:notice] %> </p>
+      <p id = "alert"><%= flash[:alert] %></p>
+    </div>
+
+    <h1 id = "header-text">
+      John Tan
+    </h1>
+    <p>
+      An Aspiring Ruby on Rails Developer <br /> 
+      Senior majoring in Computer Information Systems at <br />
+      Baruch College <br />
+       <icon class = "fi-mail"> <%= mail_to " john.tan1@baruchmail.cuny.edu" %> </icon><br />
+
+      <icon class = "fi-torso"> <%= link_to "ABOUT ME", about_path %> </icon> | 
+      <icon class = "fi-page-pdf"> <%= link_to "RESUMÉ", "https://s3.amazonaws.com/JohnTan/JTan_Resume_Official.pdf", target:"_new" %> </icon> |
+      <icon class = "fi-social-github"> <%= link_to "GITHUB", "https://github.com/jctan", target:"_new" %></icon> | 
+      <icon class = "fi-social-linkedin"> <%= link_to "LINKEDIN", "http://www.linkedin.com/in/johnctan", target:"_new" %></icon>
+    </p>
+
+  </div>
+</div>

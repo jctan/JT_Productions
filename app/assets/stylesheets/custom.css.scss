@@ -1,0 +1,35 @@
+@import url("http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700");
+
+.row {
+	margin-top:30px;
+}
+
+.centered {
+  text-align: center;
+  font-family: "Open Sans";
+}
+
+.footer {
+  margin-top: 30px;
+  border-top: 1px solid #f0f0f0;
+  text-align: right;
+  font-size: .8em;
+  padding-right: 50px;
+}
+
+
+.Blogs {
+  margin-top:25px;
+}
+
+.Portfolio {
+  margin-top:40px;
+}
+
+
+.section-header {
+  color: black;
+  &:hover {
+    color: black
+  } 
+}

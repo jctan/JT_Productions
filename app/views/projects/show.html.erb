@@ -1,0 +1,28 @@
+<% provide(:title, @project.name) %>
+<div class="large-6 small-centered columns">
+  <p id="notice"><%= notice %></p>
+
+  <h3>
+    <%= @project.name %>
+  </h3>
+  <%= image_tag @project.picture.url %>
+  <br /><br />
+  <p>
+    <%= raw @project.body %>
+  </p>
+  <p>
+    <% unless @project.github.empty? %>
+      <%= link_to "Github", @project.github, class: "button tiny radius round" %>
+    <% end %>
+    <% unless @project.site_link.empty? %>
+      <%= link_to "Link", @project.site_link, class: "button tiny radius round" %>
+    <% end %>
+  </p>
+
+  <%= link_to 'Back', projects_path, class: "button tiny radius round left" %>
+
+  <% if current_user %>
+    <%= link_to 'Edit', edit_project_path(@project), class:"button alert tiny radius round" %>
+    <%= link_to "Destroy", @project, method: :delete, data: { confirm: "Are you sure?" }, class: "button alert tiny radius round" %>
+  <% end %>
+</div>

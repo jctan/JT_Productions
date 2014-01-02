@@ -1,0 +1,12 @@
+<div class="large-6 small-centered columns">
+   <br />
+  <h1 class = "centered">Editing Portfolio</h1>
+  <hr>
+
+  <%= render 'form' %>
+
+  <br />
+  <%= link_to 'Show', @project %> |
+  <%= link_to 'Back', projects_path %> |
+  <%= link_to "Destroy", @project, method: :delete, data: { confirm: "Are you sure?" } %>
+</div>
