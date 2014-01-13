@@ -13,17 +13,6 @@
 
 ActiveRecord::Schema.define(version: 20131231191816) do
 
-  create_table "articles", force: true do |t|
-    t.string   "name"
-    t.text     "body"
-    t.datetime "date"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.string   "picture_file_name"
-    t.string   "picture_content_type"
-    t.integer  "picture_file_size"
-    t.datetime "picture_updated_at"
-  end
 
   create_table "projects", force: true do |t|
     t.string   "name"

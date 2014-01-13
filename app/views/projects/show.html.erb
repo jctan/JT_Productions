@@ -19,8 +19,6 @@
     <% end %>
   </p>
 
-  <%= link_to 'Back', projects_path, class: "button tiny radius round left" %>
-
   <% if current_user %>
     <%= link_to 'Edit', edit_project_path(@project), class:"button alert tiny radius round" %>
     <%= link_to "Destroy", @project, method: :delete, data: { confirm: "Are you sure?" }, class: "button alert tiny radius round" %>
