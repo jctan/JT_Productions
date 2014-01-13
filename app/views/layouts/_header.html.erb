@@ -6,11 +6,11 @@
 
 <div class = "centered">
   <p>
-  <i><a href="/">Home </a></i>
-  <icon class = "fi-italic"><i><%= link_to " Projects", projects_path %></i></icon>
-  <icon class = "fi-italic"><i><%= link_to " Résumé", "https://s3.amazonaws.com/JohnTan/JTan_Resume_Official.pdf", target:"_new" %></i></icon>
+  <a href="/">Home </a>
+  <icon class = "fi-italic"><%= link_to " Projects", projects_path %></icon>
+  <icon class = "fi-italic"><%= link_to " Résumé", "https://s3.amazonaws.com/JohnTan/JTan_Resume_Official.pdf", target:"_new" %></icon>
 
-  <icon class = "fi-italic"><i><a href="/" data-dropdown="drop1" data-options="is_hover:true"> Contact</a><i></icon>
+  <icon class = "fi-italic"><a href="/" data-dropdown="drop1" data-options="is_hover:true"> Contact</a></icon>
         <ul id="drop1" class="f-dropdown" data-dropdown-content >
           <li><%= link_to "Linkedin", "http://www.linkedin.com/in/johnctan", target:"_new" %></li>
           <li><%= link_to "Github", "https://github.com/jctan", target:"_new" %></li>
