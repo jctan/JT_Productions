@@ -1,8 +1,7 @@
 <% provide(:title, "Portfolio") %>
-<div class="large-8 small-centered columns">
+<div class="large-10 small-centered columns">
    <br />
-  <h1 class = "left">Projects</h1>
-  <hr>
+  <h1 class = "left"><strong>Projects</strong></h1>
   <% if current_user %>
     <%= link_to "New Project", new_project_path, class: 'button alert tiny radius round' %>
   <% end %>
