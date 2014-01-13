@@ -927,14 +927,15 @@
    $include-html-top-bar-classes: $include-html-classes;
 
 // Background color for the top bar
-   $topbar-bg-color: #333;
+   $topbar-bg-color: #111;
    $topbar-bg: $topbar-bg-color;
 
 // Height and margin
    $topbar-height: 45px;
-   $topbar-margin-bottom: 0;
+   $topbar-margin-bottom: rem-calc(30);
 
 // Control Input height for top bar
+  $topbar-input-height: 2.45em;
 
 // Controlling the styles for the title in the top bar
    $topbar-title-weight: normal;
@@ -980,7 +981,7 @@
 // Transitions and breakpoint styles
    $topbar-transition-speed: 300ms;
 // Using rem-calc for the below breakpoint causes issues with top bar
-  $topbar-breakpoint: #{upper-bound($medium-range)}; // Change to 9999px for always mobile layout
+  $topbar-breakpoint: 9999px; // Change to 9999px for always mobile layout
    $topbar-media-query: "only screen and (min-width: #{upper-bound($medium-range)})";
 
 // Divider Styles
