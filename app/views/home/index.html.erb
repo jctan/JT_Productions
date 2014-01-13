@@ -1,6 +1,5 @@
-
-  <div class = "left">
   <div class = "large-10 small-centered columns">
+    <ul>
     <div>
       <% if current_user %>
         <icon class="fi-x"></icon> <%= link_to "Logout", :logout, method: :post %>
@@ -27,8 +26,6 @@
             </div>
         </div>
       </div>
-     
-    
 
       <div class="row">
         <div class="large-4 columns"> 
@@ -111,3 +108,5 @@
             </section>
      </div>
    </div>
+   </ul>
+ </div>
