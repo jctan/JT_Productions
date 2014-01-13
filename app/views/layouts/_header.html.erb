@@ -1,6 +1,6 @@
 <div data-magellan-expedition="fixed">
-<div class="contain-to-grid sticky">
-<nav class="top-bar docs-bar hide-for-small" data-topbar>
+<div class="fixed">
+<nav class="top-bar docs-bar" data-topbar>
   <ul class="title-area">
     <li class="name">
       <h1><a href="/">John Tan</a></h1>
@@ -27,39 +27,4 @@
 </nav>
 </div>
 </div>
-
-<div class = "off-canvas-wrap" />
-<div class = "inner-wrap" />
-<nav class="tab-bar show-for-small">
-  <section class = "left-small">
-    <a class = "left-off-canvas-toggle menu-icon">
-    <span></span>
-  </a>
-</section>
-
-<section class = "middle tab-bar-section">
-  <h1 class = "title">John Tan</h1>
-</section>
-</nav>
-
-<aside class = "left-off-canvas-menu">
-  <ul class = "off-canvas-list">
-    <li><label class ="first">John Tan</label></li>
-    <li><a href="/">Home</a></li>
-    <li><%= link_to "Projects", projects_path %></li>
-    <li><%= link_to "Résumé", "https://s3.amazonaws.com/JohnTan/JTan_Resume_Official.pdf", target:"_new" %></li>
-
-    <li class="has-dropdown">
-        <a href="/">Contact</a>
-          <ul class="dropdown">
-          <li><%= link_to "Linkedin", "http://www.linkedin.com/in/johnctan", target:"_new" %></li>
-          <li><%= link_to "Github", "https://github.com/jctan", target:"_new" %></li>
-          <li><%= mail_to " john@johnctan.com" %></li>
-        </ul>
-      </li>
-  </ul>
-</aside>
-
-<a class = "exit-off-canvas"></a>
-
 
